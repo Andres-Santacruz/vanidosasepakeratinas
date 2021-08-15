@@ -1,0 +1,277 @@
+.header {
+  background-color: var(--primary);
+  position: sticky;
+  top: 0;
+  height: 80px;
+  z-index: 20;
+  display: flex;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /*flex-wrap: wrap;*/
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.img_logo {
+  margin-top: 5px;
+  width: 160px;
+}
+.logoanchor {
+  margin: 0 10px 0 15px;
+}
+
+.contentForm {
+  flex-basis: 500px;
+  margin-left: 30px;
+}
+.containerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  transition: clip-path 0.7s ease-in-out;
+  padding: 3px 0 0 0;
+}
+.ul > li {
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  position: relative;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+.ul li a {
+  --clipy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.ul li a::after {
+  content: "";
+  display: block;
+  background: white;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clipy);
+  transition: clip-path 0.4s;
+}
+.ul > li > a:hover {
+  --clipy: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.searchForm {
+  display: flex;
+}
+.search_input {
+  padding: 8px;
+  width: 100%;
+  list-style: none;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 20px;
+}
+.btnLupa {
+  border: none;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background-color: #fafafa;
+  border-left: 1px solid #ccc;
+}
+.btnLupa svg {
+  width: 32px;
+  margin-top: 5px;
+}
+.MenuBars {
+  display: none;
+  background-image: url("../public/ham-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.li_caricon {
+  display: flex;
+  flex-direction: column;
+}
+.shoppinCar {
+  position: relative;
+  padding: 0 15px 0 0;
+}
+.shoppinCar a > span {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  padding: 0 4px;
+  font-size: 10px;
+  height: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  background: #5c241c;
+}
+
+.search_input::placeholder {
+  color: rgb(204, 204, 204);
+}
+.checkbox {
+  display: none;
+}
+.checkbox:checked ~ ul {
+  /*display: block;
+  position: absolute;
+  padding: 10px 20px 20px 20px;
+  top: 81%;
+  background: #b46c5c;
+  background: linear-gradient(180deg, #b46c5c 0%, #fddbd399 65%, #eccdc622 90%);
+  left: 0;
+  right: 0;
+  height: 100vh;*/
+  clip-path: circle(128.3% at 80% 0);
+}
+/*.checkbox:checked ~ ul li {
+  background-color: white;
+
+  padding: 10px;
+  text-align: center;
+}*/
+/*.checkbox:checked ~ ul :first-child {
+  border-radius: 8px 8px 0 0;
+  padding-top: 20px;
+}
+.checkbox:checked ~ ul :last-child {
+  border-radius: 0 0 8px 8px;
+  padding-bottom: 25px;
+}*/
+.checkbox:checked ~ label {
+  background-image: url("../public/close-menu.svg");
+}
+@media screen and (max-width: 1060px) {
+  .contentForm {
+    flex-basis: 340px;
+    margin-left: 22px;
+  }
+  .img_logo {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .img_logo {
+    width: 130px;
+  }
+  .contentForm {
+    flex-basis: 318px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .MenuBars {
+    display: block;
+    padding: 0 3px;
+  }
+  .containerLinks {
+    justify-content: flex-end;
+    flex-grow: 0;
+  }
+  .ul {
+    /*agregando cosas*/
+    display: block;
+    position: absolute;
+    padding: 10px 20px 20px 20px;
+    top: 81%;
+    background: #b46c5c;
+    background: linear-gradient(
+      180deg,
+      #b46c5c 0%,
+      #fddbd399 65%,
+      #eccdc622 90%
+    );
+    left: 0;
+    right: 0;
+    height: 100vh;
+    clip-path: circle(0% at 92% 0);
+    /*hasta aqui*/
+  }
+  /**/
+  .ul > li {
+    margin: 0 auto;
+  }
+  .ul :first-child {
+    border-radius: 8px 8px 0 0;
+    padding-top: 20px;
+  }
+  .ul :last-child {
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 25px;
+    /**/
+  }
+  /**/
+  .ul li {
+    background-color: white;
+
+    padding: 10px;
+    text-align: center;
+  }
+  /**/
+  .img_logo {
+    width: 120px;
+  }
+  .search_input {
+    padding: 4px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .search_input::placeholder {
+    font-size: 14px;
+  }
+  .btnLupa svg {
+    width: 24px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .img_logo {
+    width: 100px;
+  }
+  .loupeIcon {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 270px) {
+  .contentForm {
+    display: none;
+  }
+  .shoppinCar {
+    padding: 0;
+  }
+  .MenuBars {
+    padding: 0;
+  }
+  .loupeIcon {
+    width: 18px;
+  }
+  .nav {
+    justify-content: space-evenly;
+  }
+  @media screen and (max-width: 210px) {
+    .shoppinCar {
+      position: absolute;
+      top: 90vh;
+      right: 15px;
+    }
+    .img_logo {
+      width: 80px;
+    }
+  }
+}

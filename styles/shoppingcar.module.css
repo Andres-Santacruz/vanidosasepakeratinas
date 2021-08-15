@@ -1,0 +1,286 @@
+.comprasscreen {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  position: relative;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0 50px 50px 50px;
+}
+.empty {
+  background-color: #fff;
+  padding: 120px;
+  border-radius: 8px;
+}
+.empty h2 {
+  font-size: 46px;
+}
+.empty p {
+  font-size: 36px;
+  text-align: center;
+}
+.empty p a {
+  color: var(--cafeOscuro);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.cartitle {
+  font-size: 28px;
+  margin: 20px 0 0 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--primary);
+}
+.btnclose {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  background: none;
+  border: none;
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--cafeOscuro);
+}
+.btnclose:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.productcontenedor {
+  background: #fff;
+  position: relative;
+  border: 1px solid #dbdada;
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+.carcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+.imgcontenedor {
+  width: 220px;
+}
+
+.imgcontenedor img {
+  width: 100%;
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 252px;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin: 0;
+  font-size: 15px;
+}
+.price_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.precio {
+  font-weight: 700;
+}
+.btns {
+  display: flex;
+  gap: 2px;
+  border: 1px solid #e3e3e3;
+  outline: 0;
+  width: 90px;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-radius: 4px;
+  align-items: center;
+}
+.btn {
+  padding: 0;
+  margin: 0;
+  background: none;
+  width: 24px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--dorado);
+}
+
+.input {
+  width: 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.input[type="number"]::-webkit-outer-spin-button,
+.input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input[type="number"]:hover,
+.input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+.btnActulizar {
+  display: none;
+}
+.input::placeholder {
+  color: rgb(10, 10, 10);
+}
+.input:focus {
+  border: none;
+  outline: none;
+}
+.input:focus::placeholder {
+  color: #dbdada;
+}
+.resumencontenedor {
+  background: #fff;
+  margin-top: 20px;
+  position: sticky;
+  top: 160px;
+  height: 100%;
+  border-radius: 8px;
+  padding: 2px 20px 20px 20px;
+}
+.resumencontenedor h2 {
+  margin: 20px 5px 0 5px;
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 10px;
+}
+.resumencontenedor p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.resumenAlert {
+  font-size: 12px;
+  color: #aa0f0f;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.resumenPrice {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--cafeOscuro);
+}
+
+.btnwpp {
+  background-color: #00bb2d;
+  color: white;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 12px #978d8d;
+  border: solid 1px #92af7e;
+  margin: 0 auto;
+}
+.btnwpp p {
+  margin: 0;
+}
+.btnwpp:hover {
+  background-color: #0ea130;
+  cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+  .contenedor {
+    padding: 0 10px 10px 10px;
+  }
+  .imgcontenedor {
+    width: 180px;
+  }
+  .resumencontenedor {
+    padding: 2px 5px 5px 5px;
+  }
+  .resumencontenedor h2 {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 13px;
+  }
+  .cartitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .comprasscreen {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor {
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .contenedor::-webkit-scrollbar {
+    width: 5px;
+  }
+  .contenedor::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .contenedor::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .contenedor::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  .imgcontenedor {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .main_info {
+    width: 100%;
+  }
+  .comprasscreen {
+    margin-bottom: 20px;
+  }
+  .contenedor {
+    height: 400px;
+  }
+  .imgcontenedor {
+    width: 100px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  .cartitle {
+    font-size: 22px;
+  }
+  .btnclose {
+    font-weight: 800;
+    font-size: 16px;
+  }
+  .price_info {
+    margin-bottom: 10px;
+  }
+  .btnclose {
+    right: 0;
+    top: 0;
+    font-size: 14px;
+  }
+}

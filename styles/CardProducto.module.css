@@ -1,0 +1,113 @@
+.contenedor {
+  width: 270px;
+  margin: 20px 15px;
+  border-radius: 20px;
+  height: 470px;
+  box-shadow: 0 6px 8px 0 rgba(230, 123, 74, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.img figure {
+  margin: 0;
+  padding: 0;
+}
+.img figure img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 240px;
+}
+.main_info {
+  padding: 1px 10px;
+}
+.descripcion {
+  font-size: 14px;
+}
+.main_info h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 5px;
+  margin: 10px 0;
+}
+.price_info {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
+  padding: 0 30px 10px 30px;
+}
+.price_info div span {
+  font-size: 20px;
+  font-weight: 900;
+}
+.btn_add {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--primary);
+  cursor: pointer;
+  border: none;
+  color: #70241c;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 5px;
+  gap: 8px;
+}
+.btn_add p {
+  margin: 0;
+  padding: 0;
+}
+.price_info div button:hover {
+  filter: contrast(80%);
+}
+.price_info div button:active {
+  transform: scale(0.96);
+  border: none;
+}
+@media screen and (max-width: 330px) {
+  .contenedor {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .main_info {
+    padding: 0;
+    text-align: center;
+  }
+  .main_info h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .price_info {
+    justify-content: space-around;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 270px) {
+  .contenedor {
+    width: 100%;
+    box-shadow: none;
+    margin: 10px 0;
+  }
+  .main_info {
+    padding: 0;
+  }
+  .main_info p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .main_info h2 {
+    font-size: 16px;
+  }
+  .btn_add {
+    gap: 0;
+  }
+  .price_info div span {
+    font-size: 14px;
+  }
+  .price_info div button {
+    width: 60px;
+    font-size: 12px;
+  }
+}

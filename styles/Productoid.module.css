@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(
+    auto-fill,
+    30% [col-star] 50% [col-middle] 20% [col-end]
+  );
+}
+.imgcontainer {
+}
+.imgcontainer img {
+  width: 100%;
+}
+/* .imgcontainer img:hover {
+  transform: scale(1.5);
+} */
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.infocontainer h2 {
+  font-size: 2.8em;
+  text-transform: capitalize;
+}
+.infocontainer p {
+  font-size: 1.6em;
+}
+
+.infocontainer span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.btnscontainer {
+  margin: auto;
+}
