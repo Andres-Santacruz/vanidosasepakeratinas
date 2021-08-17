@@ -6,14 +6,11 @@
     30% [col-star] 50% [col-middle] 20% [col-end]
   );
 }
-.imgcontainer {
-}
+
 .imgcontainer img {
   width: 100%;
 }
-/* .imgcontainer img:hover {
-  transform: scale(1.5);
-} */
+
 .infocontainer {
   display: flex;
   flex-direction: column;

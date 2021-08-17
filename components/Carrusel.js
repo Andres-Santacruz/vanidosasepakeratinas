@@ -32,6 +32,7 @@ const Carrusel = () => {
       interval={7000}
       showStatus={false}
       showThumbs={false}
+      dynamicHeight={false}
     >
       {imgs.map((dataImgs) => {
         return (
@@ -44,6 +45,7 @@ const Carrusel = () => {
               src={`${dataImgs.URL}`}
               loading="lazy"
               alt={`${dataImgs.nombre}`}
+              style={{ height: "220px" }}
             />
           </div>
         );

@@ -15,7 +15,7 @@ export default function Home({ data }) {
       <div className={styles.container}>
         <main className={styles.main}>
           <div className={styles.grid}>
-            {data.map((product, i) => {
+            {data.map((product) => {
               return <ProductCard data={product} key={product.id} />;
             })}
           </div>
@@ -44,6 +44,6 @@ export async function getStaticProps(context) {
   }
   return {
     props: { data },
-    //revalidate: 3600*4,
+    revalidate: 3600 * 6,
   };
 }

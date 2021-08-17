@@ -211,11 +211,22 @@
     width: 180px;
   }
   .resumencontenedor {
-    padding: 2px 5px 5px 5px;
+    padding: 2px 5px 25px 5px;
   }
   .resumencontenedor h2 {
     font-size: 20px;
   }
+
+  .empty {
+    padding: 0;
+  }
+  .empty h2 {
+    font-size: 28px;
+  }
+  .empty p {
+    font-size: 24px;
+  }
+
   .title {
     font-size: 13px;
   }
@@ -230,7 +241,7 @@
     align-items: center;
   }
   .contenedor {
-    height: 600px;
+    max-height: 500px;
     overflow: hidden;
     overflow-y: scroll;
   }
@@ -251,6 +262,9 @@
   .imgcontenedor {
     width: 140px;
   }
+  .resumencontenedor {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width: 440px) {
   .main_info {
@@ -259,9 +273,7 @@
   .comprasscreen {
     margin-bottom: 20px;
   }
-  .contenedor {
-    height: 400px;
-  }
+
   .imgcontenedor {
     width: 100px;
   }

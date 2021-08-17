@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { useAlert } from "react-alert";
 import { carContext } from "../context/carContext";
 import { types } from "../reducers/types";

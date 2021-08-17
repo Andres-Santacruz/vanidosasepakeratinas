@@ -6,11 +6,10 @@ import { carContext } from "../context/carContext";
 import style from "../styles/Header.module.css";
 import Carshopping from "./icons/Carshopping";
 import InfoBaner from "./InfoBaner";
-import LoupeIcon from "./icons/LoupeIcon";
+import FormBusqueda from "./FormBusqueda";
 
 const Header = () => {
   const { car } = useContext(carContext);
-  //console.log(car);
   return (
     <>
       <header className={style.header}>
@@ -22,19 +21,7 @@ const Header = () => {
               </a>
             </Link>
           </div>
-          <div className={style.contentForm}>
-            <form className={style.searchForm}>
-              <input
-                className={style.search_input}
-                type="text"
-                placeholder="Buscar productos"
-              />
-              <button className={style.btnLupa} type="submit">
-                {/* <img className={style.loupeIcon} src="./loupe.svg" /> */}
-                <LoupeIcon />
-              </button>
-            </form>
-          </div>
+          <FormBusqueda />
           <div className={style.containerLinks}>
             <input type="checkbox" id="menu" className={style.checkbox} />
             <label className={style.MenuBars} htmlFor="menu"></label>

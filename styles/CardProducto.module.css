@@ -69,7 +69,6 @@
 @media screen and (max-width: 330px) {
   .contenedor {
     margin: 10px 0;
-    width: 100%;
   }
   .main_info {
     padding: 0;
@@ -82,6 +81,7 @@
   .price_info {
     justify-content: space-around;
     padding: 0;
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 270px) {
