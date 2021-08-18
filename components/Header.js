@@ -25,7 +25,12 @@ const Header = () => {
           <div className={style.containerLinks}>
             <input type="checkbox" id="menu" className={style.checkbox} />
             <label className={style.MenuBars} htmlFor="menu"></label>
-            <ul className={style.ul}>
+            <ul
+              className={style.ul}
+              onClick={() => {
+                document.getElementById("menu").checked = false;
+              }}
+            >
               <li>
                 <Link href="/nuevo">
                   <a>LO MÁS NUEVO</a>

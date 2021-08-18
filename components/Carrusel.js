@@ -6,6 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { list } from "../services/api";
 import CustomLoader from "./CustomLoader";
+import styles from "../styles/carrusel.module.css";
 
 const Carrusel = () => {
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,7 @@ const Carrusel = () => {
               src={`${dataImgs.URL}`}
               loading="lazy"
               alt={`${dataImgs.nombre}`}
-              style={{ height: "220px" }}
+              className={styles.imgsMoviles}
             />
           </div>
         );

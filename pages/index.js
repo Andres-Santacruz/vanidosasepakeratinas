@@ -8,8 +8,9 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>Epa keratinas Cauca</title>
+        <title>Vanidosas Epa Keratinas</title>
         <link rel="icon" href="/logoicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Carrusel />
       <div className={styles.container}>

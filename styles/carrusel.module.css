@@ -1,48 +1,13 @@
-.contenedor {
-  position: relative;
-  overflow: hidden;
+.imgsMoviles {
+  height: 230px;
 }
-.carruselIgm {
-  display: flex;
-  height: 350px;
-  flex-wrap: nowrap;
+@media screen and (max-width: 520px) {
+  .imgsMoviles {
+    height: 170px;
+  }
 }
-.img {
-  min-width: 100%;
-  min-height: 350px;
-  position: relative;
-}
-.img img {
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
-}
-.controles {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.controles button {
-  pointer-events: all;
-  border: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  width: 50px;
-  margin: auto 0;
-  text-align: center;
-  position: absolute;
-  font-size: 150px;
-  z-index: 1;
-}
-.controles button img {
-  width: 100%;
-}
-.controles [izq="izq"] {
-  left: 0;
-}
-.controles [der="der"] {
-  right: 0;
+@media screen and (max-width: 340px) {
+  .imgsMoviles {
+    height: 160px;
+  }
 }

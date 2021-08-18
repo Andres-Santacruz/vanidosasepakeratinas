@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { useContext, useEffect, useMemo } from "react";
 import Link from "next/link";
 
@@ -34,7 +36,6 @@ const compras = () => {
 
   const handleSubmit = (e, carro) => {
     e.preventDefault();
-    console.log(typeof e.target[0].value, " es ", e.target[0].value);
     if (
       !isNaN(Number(e.target[0].value)) &&
       !(e.target[0].value === "") &&
@@ -46,13 +47,17 @@ const compras = () => {
       });
     }
     e.target[0].value = "";
-    e.target[0].blur();
+    e.target.children[0].blur();
   };
 
   const carLength = car.length > 0;
 
   return (
     <>
+      <Head>
+        <title>Maratones | VanidosasEpaKeratinas</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={style.comprasscreen}>
         <div className={style.contenedor}>
           {carLength && <h2 className={style.cartitle}>TU CARRO</h2>}

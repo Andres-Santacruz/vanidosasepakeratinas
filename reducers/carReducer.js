@@ -44,7 +44,6 @@ export const carReducer = (state = [], action) => {
           if (action.payload.manual <= 0) {
             return acc;
           }
-          console.log(action.payload.manual);
           return acc.concat({
             ..._data,
             cantidad: Number(action.payload.manual),

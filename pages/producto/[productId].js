@@ -2,12 +2,14 @@ import { list } from "../../services/api";
 import Head from "next/head";
 
 import styles from "../../styles/Productoid.module.css";
+import ButtonAdd from "../../components/ButtonAdd";
 
-const productId = ({ product }) => {
+const productId = ({ product, similar }) => {
   return (
     <>
       <Head>
-        <title>{product.nombre} | Vanidosas Epa Keatinas Cauca</title>
+        <title>{product.nombre} | VanidosasEpaKeatinas</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <section className={styles.container}>
         <div className={styles.imgcontainer}>
@@ -20,10 +22,15 @@ const productId = ({ product }) => {
         </div>
         <div className={styles.btnscontainer}>
           <div>
-            <span>ver similares</span>
+            <ButtonAdd data={product} styles={styles.btn_add} />
           </div>
           <div>
-            <button>Añadir al carro</button>
+            <h3>ver similares</h3>
+            <div>
+              {similar.map((simil) => {
+                return <p key={simil.id}>{simil.nombre}</p>;
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -42,12 +49,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const res = await list("Home");
-  console.log(params);
   const product = res.find(
     (product) => product.nombre === params.productId.replace(/-/g, " ")
   );
-
-  return { props: { product } };
+  const filtro = res.filter((p) =>
+    p.nombre.includes(params.productId.split("-")[0])
+  );
+  const similar = filtro.filter(
+    (pr) => !pr.nombre.includes(params.productId.replace(/-/g, " "))
+  );
+  return { props: { product, similar } };
 }
 
 export default productId;

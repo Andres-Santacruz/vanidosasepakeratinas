@@ -1,20 +1,8 @@
-import { useContext } from "react";
-import { useAlert } from "react-alert";
-import { carContext } from "../context/carContext";
-import { types } from "../reducers/types";
 import Link from "next/link";
 import style from "../styles/CardProducto.module.css";
+import ButtonAdd from "./ButtonAdd";
 
 const ProductCard = ({ data }) => {
-  const alert = useAlert();
-  const { dispatch } = useContext(carContext);
-  const handleAddProduct = (data) => {
-    dispatch({
-      type: types.ADD_CAR,
-      payload: data,
-    });
-    alert.show("Añadido al carro");
-  };
   return (
     <div className={style.contenedor}>
       <Link href={`/producto/${data.nombre.replace(/ /g, "-")}`}>
@@ -42,15 +30,7 @@ const ProductCard = ({ data }) => {
           <span>${new Intl.NumberFormat("de-DE").format(data.precio)}</span>
         </div>
         <div>
-          <button
-            onClick={() => handleAddProduct(data)}
-            className={style.btn_add}
-          >
-            <div>
-              <img src="https://icongr.am/fontawesome/cart-plus.svg?size=15&color=bc7424" />
-            </div>
-            <p>Añadir</p>
-          </button>
+          <ButtonAdd data={data} styles={style.btn_add} />
         </div>
       </div>
     </div>

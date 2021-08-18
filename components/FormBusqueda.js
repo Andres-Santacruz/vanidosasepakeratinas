@@ -14,7 +14,8 @@ const FormBusqueda = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value.length > 2) {
-      router.push(`/bucar?q=${value}`);
+      e.target.children[0].blur();
+      router.push(`/buscar/producto?q=${value.replace(/ /g, "")}`);
     }
   };
 

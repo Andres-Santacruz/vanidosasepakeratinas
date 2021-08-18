@@ -3,12 +3,16 @@
   grid-auto-flow: column;
   grid-template-columns: repeat(
     auto-fill,
-    30% [col-star] 50% [col-middle] 20% [col-end]
+    50% [col-star] 35% [col-middle] 15% [col-end]
   );
+  margin-top: 20px;
 }
 
+.imgcontainer {
+  text-align: center;
+}
 .imgcontainer img {
-  width: 100%;
+  width: 80%;
 }
 
 .infocontainer {
@@ -30,4 +34,21 @@
 }
 .btnscontainer {
   margin: auto;
+}
+.btn_add {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--primary);
+  cursor: pointer;
+  border: none;
+  color: #70241c;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 5px;
+  gap: 8px;
+}
+.btn_add p {
+  margin: 0;
+  padding: 0;
 }
