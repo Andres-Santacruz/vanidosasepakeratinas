@@ -9,7 +9,7 @@ const ProductCard = ({ data }) => {
         <a className={style.img}>
           <figure>
             <img
-              src={data.URL}
+              src={data.URL ? data.URL : "./not-found-image.jpg"}
               alt={data.nombre}
               loading="lazy"
               style={{ objectFit: "cover" }}

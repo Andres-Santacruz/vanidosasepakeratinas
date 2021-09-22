@@ -58,6 +58,18 @@ const BusquedaScreen = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div>
+        {products.length !== 0 && loading && (
+          <p
+            style={{
+              fontSize: "28px",
+              margin: "30px auto",
+              maxWidth: "1100px",
+            }}
+          >
+            Resultados para:{" "}
+            <span style={{ fontWeight: "600" }}>"{router.query.q}"</span>
+          </p>
+        )}
         <div
           style={{
             display: "flex",

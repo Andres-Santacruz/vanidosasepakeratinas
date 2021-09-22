@@ -7,6 +7,17 @@
   align-items: center;
 }
 
+.titlenuevo {
+  margin: 30px 20px 20px 10px;
+  color: var(--cafeOscuro);
+  text-align: center;
+}
+.titlenuevo h2 {
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 2em;
+}
 .grid {
   display: flex;
   align-items: center;
@@ -35,6 +46,9 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .titlenuevo h2 {
+    font-size: 1.5em;
   }
 }
 @media (max-width: 205px) {

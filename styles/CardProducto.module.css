@@ -25,12 +25,14 @@
 }
 .descripcion {
   font-size: 14px;
+  margin: 5px;
 }
+
 .main_info h2 {
   text-transform: uppercase;
   text-align: center;
   padding: 0 5px;
-  margin: 10px 0;
+  margin: 10px 1px;
 }
 .price_info {
   display: flex;
@@ -74,10 +76,7 @@
     padding: 0;
     text-align: center;
   }
-  .main_info h2 {
-    margin: 0;
-    padding: 0;
-  }
+
   .price_info {
     justify-content: space-around;
     padding: 0;

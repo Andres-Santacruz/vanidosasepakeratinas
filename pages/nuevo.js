@@ -10,8 +10,12 @@ const Nuevos = ({ data }) => {
       <Head>
         <title>Productos Nuevos de Epa Colombia | VanidosasEpaKeratinas</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/logoicon.ico" />
       </Head>
       <div className={styles.container}>
+        <div className={styles.titlenuevo}>
+          <h2>Los Productos más Nuevos de EPA Colombia.</h2>
+        </div>
         <main className={styles.main}>
           <div className={styles.grid}>
             {data.map((product, i) => {

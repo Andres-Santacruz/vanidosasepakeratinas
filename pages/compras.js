@@ -55,7 +55,7 @@ const compras = () => {
   return (
     <>
       <Head>
-        <title>Maratones | VanidosasEpaKeratinas</title>
+        <title>Carrito de compras | VanidosasEpaKeratinas</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={style.comprasscreen}>
