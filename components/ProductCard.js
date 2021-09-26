@@ -2,14 +2,14 @@ import Link from "next/link";
 import style from "../styles/CardProducto.module.css";
 import ButtonAdd from "./ButtonAdd";
 
-const ProductCard = ({ data }) => {
+const ProductCard = ({ data, url = "" }) => {
   return (
     <div className={style.contenedor}>
       <Link href={`/producto/${data.nombre.replace(/ /g, "-")}`}>
         <a className={style.img}>
           <figure>
             <img
-              src={data.URL ? data.URL : "./not-found-image.jpg"}
+              src={data.URL ? data.URL : url + "./not-found-image.jpg"}
               alt={data.nombre}
               loading="lazy"
               style={{ objectFit: "cover" }}

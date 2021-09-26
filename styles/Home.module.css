@@ -11,12 +11,19 @@
   margin: 30px 20px 20px 10px;
   color: var(--cafeOscuro);
   text-align: center;
+  background: rgb(220, 178, 89);
+  background: linear-gradient(
+    180deg,
+    rgba(220, 178, 89, 0.03) 75%,
+    rgba(232, 168, 64, 0.45) 99%,
+    rgba(212, 154, 64, 0.2497373949579832) 100%
+  );
+  padding: 5px;
 }
 .titlenuevo h2 {
-  border-bottom: 1px solid var(--primary);
-  padding-bottom: 10px;
   text-transform: uppercase;
   font-size: 2em;
+  margin-bottom: 10px;
 }
 .grid {
   display: flex;

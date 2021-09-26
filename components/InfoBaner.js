@@ -5,16 +5,24 @@ const InfoBaner = () => {
     <section>
       <div className="contenedor">
         <div className="div_item">
-          <img
-            src={`https://icongr.am/fontawesome/comments.svg?size=40&color=${color}`}
-          />
-          <span>Asesoría Personalizada</span>
+          <Link href={"/ayuda"}>
+            <a>
+              <img
+                src={`https://icongr.am/fontawesome/comments.svg?size=40&color=${color}`}
+              />
+              <span>¿Necesitas Ayuda?</span>
+            </a>
+          </Link>
         </div>
         <div className="div_item">
-          <img
-            src={`https://icongr.am/fontawesome/truck.svg?size=40&color=${color}`}
-          />
-          <span> Envios a todo Colombia</span>
+          <Link href={"/nosotros#ubicacion"}>
+            <a>
+              <img
+                src={`https://icongr.am/fontawesome/truck.svg?size=40&color=${color}`}
+              />
+              <span> Envios a todo Colombia</span>
+            </a>
+          </Link>
         </div>
         <div className="div_item">
           <Link href={"/mayoristas"}>

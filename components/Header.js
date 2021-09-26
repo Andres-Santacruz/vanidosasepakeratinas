@@ -37,8 +37,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/maratones">
-                  <a>MARATONES</a>
+                <Link href="/promociones">
+                  <a>ESTE MES</a>
                 </Link>
               </li>
               <li>

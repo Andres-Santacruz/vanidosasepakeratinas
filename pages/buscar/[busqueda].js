@@ -31,7 +31,6 @@ const BusquedaScreen = () => {
       if (router.query.q.length < 3) {
         router.replace("/", undefined);
       } else {
-        console.log(data);
         const busqueda = data.filter((p) => {
           return p.nombre
             .toLowerCase()
@@ -43,7 +42,6 @@ const BusquedaScreen = () => {
         setProducts(busqueda);
       }
     } else if (router.query.q === undefined) {
-      console.log(query);
       if (query) {
         router.replace("/nuevo");
       }
@@ -88,7 +86,7 @@ const BusquedaScreen = () => {
             </p>
           ) : (
             products.map((product) => {
-              return <ProductCard data={product} key={product.id} />;
+              return <ProductCard data={product} key={product.id} url={"."} />;
             })
           )}
         </div>
