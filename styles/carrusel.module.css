@@ -1,13 +1,17 @@
+.imgcontainer {
+  background: rgb(252, 205, 177);
+  background: linear-gradient(
+    180deg,
+    rgba(252, 205, 177, 0.32816876750700286) 56%,
+    rgba(254, 251, 246, 1) 70%,
+    rgba(248, 247, 247, 0.4990371148459384) 90%
+  );
+}
 .imgsMoviles {
-  height: 230px;
+  height: 280px;
 }
 @media screen and (max-width: 520px) {
   .imgsMoviles {
-    height: 170px;
-  }
-}
-@media screen and (max-width: 340px) {
-  .imgsMoviles {
-    height: 160px;
+    height: 210px;
   }
 }

@@ -41,6 +41,7 @@ const Carrusel = () => {
             key={dataImgs.nombre}
             style={{ cursor: "pointer" }}
             onClick={() => handleClik(`${dataImgs.nombre}`)}
+            className={styles.imgcontainer}
           >
             <img
               src={`${dataImgs.URL}`}
