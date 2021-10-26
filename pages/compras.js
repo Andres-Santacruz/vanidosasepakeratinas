@@ -166,7 +166,6 @@ const compras = () => {
               rel="noopener noreferrer"
               href={`https://wa.me/573206917306?text=${mensajeWpp}`}
               className={style.btnwpp}
-              className={style.btnwpp}
             >
               <WhatsappIcon />
               <p>Completa tu compra</p>
