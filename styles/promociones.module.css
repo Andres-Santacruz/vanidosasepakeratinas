@@ -1,0 +1,38 @@
+.main {
+  max-width: 1100px;
+  display: flex;
+  margin: 30px auto;
+}
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+}
+.imgcontent {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.imgcontent img {
+  width: 100%;
+}
+.info {
+  margin-left: 30px;
+}
+.info h2 {
+  font-size: 40px;
+}
+.btn {
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: var(--cafeOscuro);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  cursor: pointer;
+  filter: contrast(80%);
+}
