@@ -9,6 +9,8 @@ const EXCEL_URL = {
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMghp3m4XnKhkTU4TcyEgTu_h0BC7UmL8f-x3_hsS-lSENtxM4ACjHwwRT-eE-cx_thC31A6y_1-5W/pub?gid=1833102332&single=true&output=csv",
   Nosotros:
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMghp3m4XnKhkTU4TcyEgTu_h0BC7UmL8f-x3_hsS-lSENtxM4ACjHwwRT-eE-cx_thC31A6y_1-5W/pub?gid=1727532824&single=true&output=csv",
+  promociones:
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMghp3m4XnKhkTU4TcyEgTu_h0BC7UmL8f-x3_hsS-lSENtxM4ACjHwwRT-eE-cx_thC31A6y_1-5W/pub?gid=1186749551&single=true&output=csv",
 };
 
 export async function list(orden) {
